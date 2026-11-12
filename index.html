@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YTMP4 Bookmarklet: YouTube to MP4 in One Click</title>
+<meta name="description" content="Free bookmarklet that opens the YouTube video you are watching in YT to MP4. Pick 360p to 1080p and save the MP4. No extension, no app, no sign-up.">
+<link rel="canonical" href="https://dipak8080.github.io/ytmp4-bookmarklet/">
+<style>
+body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fafaf7;color:#1a1a1a}
+main{max-width:680px;margin:0 auto;padding:40px 20px 60px}
+h1{font-size:30px;line-height:1.2;margin:0 0 12px}
+h2{font-size:20px;margin:32px 0 8px}
+.bm{display:inline-block;margin:16px 0;padding:12px 22px;border-radius:12px;background:#e5484d;color:#fff;font-weight:700;text-decoration:none;cursor:grab}
+code,pre{background:#f0efe9;border-radius:8px}
+code{padding:2px 6px}
+pre{padding:12px;overflow:auto;font-size:13px;white-space:pre-wrap;word-break:break-all}
+a{color:#c4272d}
+.small{color:#666;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>YTMP4 bookmarklet: YouTube to MP4 in one click</h1>
+<p>Drag this button to your bookmarks bar. On any YouTube video, click it and <a href="https://yt-to-mp4.net/">YT to MP4</a> opens with the video ready, so you only pick a quality and save the MP4.</p>
+<a class="bm" href="javascript:(()=>{const u=location.href;const y=/^https?:\/\/((www|m|music)\.)?(youtube\.com|youtu\.be)\//.test(u);window.open('https://yt-to-mp4.net/'+(y?'?url='+encodeURIComponent(u):''),'_blank','noopener')})()" title="Drag me to your bookmarks bar">YT to MP4</a>
+<p class="small">Bookmarks bar hidden? Press Ctrl+Shift+B (Cmd+Shift+B on Mac).</p>
+<h2>Add it by hand</h2>
+<p>Create a new bookmark, name it YT to MP4 and paste this as the URL:</p>
+<pre>javascript:(()=>{const u=location.href;const y=/^https?:\/\/((www|m|music)\.)?(youtube\.com|youtu\.be)\//.test(u);window.open('https://yt-to-mp4.net/'+(y?'?url='+encodeURIComponent(u):''),'_blank','noopener')})()</pre>
+<h2>On a phone</h2>
+<p>Bookmarklets are fiddly on mobile, so use the address bar trick instead. On a YouTube video, change <code>youtube.com</code> to <code>yt-to-mp4.net</code> and open it:</p>
+<pre>https://yt-to-mp4.net/watch?v=VIDEO_ID</pre>
+<p>Shorts work the same way: <code>yt-to-mp4.net/shorts/VIDEO_ID</code>.</p>
+<h2>What it does</h2>
+<p>It reads the page address, checks it is a YouTube link and opens the converter in a new tab with that link. Nothing else is sent or stored, and no permissions are needed. Source code: <a href="https://github.com/dipak8080/ytmp4-bookmarklet">github.com/dipak8080/ytmp4-bookmarklet</a>.</p>
+<p class="small">Only download videos you own or have permission to save. YT to MP4 is not affiliated with YouTube or Google.</p>
+</main>
+</body>
+</html>
